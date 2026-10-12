@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "customers": {
+      ".read": "auth != null && auth.token.email === 'joshibasu12345@gmail.com'",
+      ".write": "auth != null && auth.token.email === 'joshibasu12345@gmail.com'",
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.email === 'joshibasu12345@gmail.com')",
+        ".write": "auth != null && (auth.uid === $uid || auth.token.email === 'joshibasu12345@gmail.com')"
+      }
+    }
+  }
+}
